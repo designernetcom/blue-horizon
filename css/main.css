@@ -5013,6 +5013,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   padding: 30px;
   z-index: 1;
+  display: none !important;
 }
 
 .baseCard.-type-1.-padding-lg .baseCard__content {
@@ -11053,11 +11054,14 @@ body.is-cursor-active * {
 }
 
 .searchForm{
-  background: #0000007a;
+  background: rgba(18, 34, 35, 0.5);
 }
 .searchForm .icon-arrow-down{
   color: #fff;
 }
 .js-select-control-chosen{
   color: #fff;
+}
+.searchForm__button button{
+  background: #F9DABA !important;
 }
