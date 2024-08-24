@@ -1849,6 +1849,7 @@ const Calendar = (function() {
       autoHeight: true,
       spaceBetween: 30,
       slidesPerView: 1,
+      autoplay: true,
       breakpoints: breakpoints,
       navigation: {
         prevEl: '.js-calendar-slider-prev',
