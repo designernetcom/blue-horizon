@@ -367,13 +367,15 @@ function sectionSlider() {
     let centered = false;
     let pagination = false;
     let scrollbar = false;
-
+    let autoplay = false;
+    
     if (el.getAttribute('data-gap'))    gap = el.getAttribute('data-gap');
     if (el.hasAttribute('data-loop'))   loop = true;
     if (el.hasAttribute('data-center')) centered = true;
+    if (el.hasAttribute('data-autoplay')) autoplay = { delay: 3000, disableOnInteraction: false };
 
     if (el.getAttribute('data-pagination')) {
-      let paginationElement = document.querySelector(`.${el.getAttribute('data-pagination')}`)
+      let paginationElement = document.querySelector(`.${el.getAttribute('data-pagination')}`);
       
       pagination = {
         el: paginationElement,
@@ -451,7 +453,7 @@ function sectionSlider() {
       lazy: true,
       
       direction: vertical,
-      
+      autoplay: autoplay,
       scrollbar: scrollbar,
       pagination: pagination,
       spaceBetween: 10,
